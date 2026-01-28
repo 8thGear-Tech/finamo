@@ -114,8 +114,9 @@
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .chatbot-toggle { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; background: linear-gradient(90deg, #2e7d32, #3aa24a); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 8px 24px rgba(46,125,50,0.3); transition: all 0.3s ease; z-index: 999; }
   .chatbot-toggle:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(46,125,50,0.4); }
-  .chatbot-popup { position: fixed; bottom: 0; right: 0; width: 100%; max-width: 420px; height: 450px; background: rgba(18,18,20,0.98); border: 1px solid rgba(202,160,35,0.2); border-radius: 16px 16px 0 0; box-shadow: -8px -8px 32px rgba(0,0,0,0.5); display: none; flex-direction: column; z-index: 998; animation: slideUp 0.3s ease; }
+  .chatbot-popup { position: fixed; bottom: 0; right: 0; width: 100%; max-width: 420px; height: 350px; background: rgba(18,18,20,0.98); border: 1px solid rgba(202,160,35,0.2); border-radius: 16px 16px 0 0; box-shadow: -8px -8px 32px rgba(0,0,0,0.5); display: none; flex-direction: column; z-index: 998; animation: slideUp 0.3s ease; }
   .chatbot-popup.active { display: flex; }
+  .chatbot-popup.active ~ .chatbot-toggle { visibility: hidden; }
   @keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   .chatbot-header { background: linear-gradient(90deg, #2e7d32, #3aa24a); padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; align-items: center; }
   .chatbot-header h2 { font-size: 18px; margin: 0; color: white; }
@@ -140,14 +141,14 @@
   .chatbot-messages::-webkit-scrollbar { width: 4px; }
   .chatbot-messages::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); }
   .chatbot-messages::-webkit-scrollbar-thumb { background: rgba(202,160,35,0.3); border-radius: 2px; }
-  @media (max-width: 640px) { .chatbot-popup { max-width: 100%; height: 80vh; } .chatbot-toggle { width: 48px; height: 48px; font-size: 24px; bottom: 16px; right: 16px; } }
+  @media (max-width: 640px) { .chatbot-popup { max-width: 100%; height: 60vh; } .chatbot-toggle { width: 48px; height: 48px; font-size: 24px; bottom: 16px; right: 16px; } }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container row between middle">
       <a href="#" class="brand row middle">
-        <img src="assets/Logo22.jfif" alt="FinaMo logo" class="brand-logo" onerror="this.onerror=null;this.src='assets/Logo22.jfif'" />
+        <img src="assets/logo221.jpg" alt="FinaMo logo" class="brand-logo" onerror="this.onerror=null;this.src='assets/logo221.jpg'" />
         <div class="brand-text">
         </div>
       </a>
@@ -659,7 +660,7 @@
   <script src="script.js"></script>
 
   <footer class="site-footer">
-    © 2026 8thGear Partners Ltd. All rights reserved.
+    © 2026g 8thGear Partners Ltd. All rights reserved.
   </footer>
 </body>
 </html>
