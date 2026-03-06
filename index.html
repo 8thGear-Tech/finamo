@@ -53,13 +53,17 @@
   .brand-name-accent { color: var(--green); }
   .brand-tagline { display: block; font-size: 12px; color: var(--gray); }
   .nav-toggle { display: none; font-size: 22px; background: transparent; color: var(--light); border: none; }
+  .nav-close { display: none; font-size: 24px; background: transparent; border: none; color: var(--light); cursor: pointer; }
   .main-nav { display: flex; gap: 18px; align-items: center; }
   .main-nav a { color: var(--light); text-decoration: none; font-weight: 500; padding: 10px 12px; border-radius: 8px; }
   .main-nav a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
   @media (max-width: 960px) {
-    .nav-toggle { display: inline-block; }
-    .main-nav { display: none; position: absolute; top: 64px; right: 16px; flex-direction: column; background: var(--deep); border: 1px solid rgba(202,160,35,0.2); padding: 12px; border-radius: 12px; }
+    .nav-toggle { display: block; }
+    .nav-close { display: block; position: absolute; top: 16px; right: 16px; }
+    .main-nav { display: none; position: fixed; top: 64px; right: 0; width: 100%; max-height: 50vh; flex-direction: column; background: rgba(18, 18, 20, 0.98); border: 1px solid rgba(202,160,35,0.2); padding: 24px; border-radius: 0; z-index: 999; overflow-y: auto; }
     .main-nav.open { display: flex; }
+    .main-nav a { padding: 14px 12px; font-size: 16px; }
+    .main-nav .btn { width: 100%; text-align: center; }
   }
   .btn { display: inline-block; padding: 12px 18px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: transform 0.15s ease, box-shadow 0.15s ease; }
   .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
@@ -162,6 +166,7 @@
         <a href="#team">Team</a>
         <a href="#impact">Impact</a>
         <a href="#contact" class="btn btn-primary">Free Financial Health Check</a>
+        <button class="nav-close" aria-label="Close navigation">✕</button>
       </nav>
     </div>
   </header>
